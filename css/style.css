@@ -1,0 +1,351 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+/*Убирает крестик в текст-боксе IE*/
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+/*Убирает лишни отступы и пробелы в кнопках браузера FireFox*/
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------*/
+body {
+  font-family: "Roboto", sans-serif;
+  background: #e5e5e5;
+  overflow-y: scroll;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container {
+  max-width: 375px;
+  margin: 0px auto;
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+}
+
+.header__row {
+  background: #e5e5e5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 78px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__search {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  max-width: 349px;
+  margin: 19px 13px;
+}
+
+.header__search input {
+  padding: 0px 35px;
+  width: 100%;
+  height: 40px;
+  background: #ffffff;
+  border: 0.5px solid #aaaaaa;
+  -webkit-box-shadow: 0px 2px 2px rgba(146, 146, 146, 0.25);
+          box-shadow: 0px 2px 2px rgba(146, 146, 146, 0.25);
+  border-radius: 5.07498px 5.07498px 5.07px 5.07px;
+}
+
+.header__tabs {
+  background: #e5e5e5;
+}
+
+.header__tabs-row {
+  margin: 0px auto;
+  max-width: 331px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 0.5px solid #cbcbcb;
+}
+
+.header__tabs-columns {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+  max-width: 331px;
+}
+
+.header__tabs-item {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.header__tabs-item a {
+  line-height: 14px;
+  font-size: 12px;
+  color: #000000;
+}
+
+.gradient-top {
+  width: 100%;
+  display: none;
+  max-width: 349px;
+  height: 20px;
+  margin: 0px auto;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e5e5e5), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to bottom, #e5e5e5 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.content {
+  margin-top: 114px;
+  margin-bottom: 102px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.selected {
+  position: relative;
+}
+
+.selected a {
+  color: #1e83bb;
+}
+
+.selected:before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 20%;
+  width: 100px;
+  height: 7px;
+  background: #1e83bb;
+  border-radius: 10px 10px 3px 3px;
+}
+
+.tabs__body {
+  max-width: 349px;
+  margin: 0px auto;
+  margin: 0px 13px;
+}
+
+.tabs__column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 0.5px solid #aaaaaa;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.tabs__rows {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  height: 40px;
+  border-bottom: 0.5px solid #aaaaaa;
+}
+
+.tabs__rows:last-of-type {
+  border-bottom: none;
+}
+
+.tabs__item {
+  padding: 13px 0px 13px 35px;
+  height: 100%;
+  background: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.tabs__checkbox input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.tabs__rows:before {
+  content: "";
+  position: absolute;
+  top: 13px;
+  left: 10px;
+  width: 13px;
+  height: 13px;
+  border-radius: 3px;
+  border: 1px solid #c4c4c4;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.tabs__checkbox.active:before {
+  content: "";
+  position: absolute;
+  top: 13px;
+  left: 10px;
+  width: 15.1px;
+  height: 10.5px;
+  background: url("../img/Icons/Check.svg") no-repeat;
+}
+
+.tabs__name-company {
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.tabs__country-company {
+  font-size: 12px;
+  line-height: 14px;
+  color: #aaaaaa;
+  padding: 0px 25px 0 10px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.footer__gradient {
+  max-width: 349px;
+  height: 20px;
+  margin: 0px auto;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#e5e5e5));
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #e5e5e5 100%);
+}
+
+.footer__row {
+  background: #e5e5e5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 11px 13px 25px 13px;
+  margin: 0px -9px;
+}
+
+.footer__column {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+  padding: 0px 9px;
+}
+
+.footer__item button {
+  border: 1px solid #c4c4c4;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 10px;
+  width: 100%;
+  height: 46px;
+  max-width: 166px;
+}
+
+.footer__btn-cancel {
+  background: rgba(255, 255, 255, 0.75);
+  color: #2e2e2e;
+  font-size: 11px;
+  line-height: 13px;
+}
+
+.footer__btn-submit {
+  background: #002c5b;
+  color: #ffffff;
+  font-size: 11px;
+  line-height: 13px;
+}
