@@ -130,7 +130,12 @@ body {
 	&__rows:last-of-type {
 		border-bottom: none;
 	}
-
+	&__item:hover {
+		background: #cacaca;
+		.tabs__country-company {
+			color: white;
+		}
+	}
 	&__item {
 		padding: 13px 0px 13px 35px;
 		height: 100%;
