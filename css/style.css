@@ -241,11 +241,11 @@ body {
 }
 
 .tabs__item:hover {
-  background: #cacaca;
+  background: #f1f1f1;
 }
 
 .tabs__item:hover .tabs__country-company {
-  color: white;
+  color: #000000;
 }
 
 .tabs__item {
