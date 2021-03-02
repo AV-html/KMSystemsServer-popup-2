@@ -149,6 +149,7 @@ body {
 
 	&__rows:before {
 		content: "";
+		pointer-events: none;
 		position: absolute;
 		top: 13px;
 		left: 10px;
