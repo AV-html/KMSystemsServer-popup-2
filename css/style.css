@@ -249,6 +249,7 @@ body {
 }
 
 .tabs__item {
+  cursor: pointer;
   padding: 13px 0px 13px 35px;
   height: 100%;
   background: #ffffff;
