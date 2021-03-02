@@ -240,6 +240,14 @@ body {
   border-bottom: none;
 }
 
+.tabs__item:hover {
+  background: #cacaca;
+}
+
+.tabs__item:hover .tabs__country-company {
+  color: white;
+}
+
 .tabs__item {
   padding: 13px 0px 13px 35px;
   height: 100%;
